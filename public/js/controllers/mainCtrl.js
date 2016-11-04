@@ -1,10 +1,10 @@
 angular.module('realEstate').controller('mainCtrl', function($scope) {
   $(document).ready(function() {
       // Select link by id and add click event
-      $('#home-link').click(function() {
+      $('#welcome-link').click(function() {
         // Animate Scroll to #bottom
         $('html,body').animate({
-          scrollTop: $("#home-view").offset().top }, // Tell it to scroll the top #bottom
+          scrollTop: $("#welcome-view").offset().top }, // Tell it to scroll the top #bottom
           3500 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
@@ -41,7 +41,7 @@ angular.module('realEstate').controller('mainCtrl', function($scope) {
         return false;
       });
       // Select link by id and add click event
-      $('#home-anchor').click(function() {
+      $('#welcome-anchor').click(function() {
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#testimonials-view").offset().top }, // Tell it toscroll to the top #bottom

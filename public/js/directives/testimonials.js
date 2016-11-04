@@ -3,4 +3,5 @@ angular.module('realEstate').directive('testimonials', function() {
     restrict: 'AE',
     templateUrl: '../views/testimonials.html'
   }
+
 })

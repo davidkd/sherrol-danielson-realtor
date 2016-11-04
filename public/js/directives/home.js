@@ -3,4 +3,5 @@ angular.module('realEstate').directive('home', function() {
     restrict: 'AE',
     templateUrl: '../views/home.html'
   }
+
 })
