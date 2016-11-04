@@ -1,0 +1,233 @@
+#contact-view{
+  height: 100vh;
+}
+
+.contact-view-container{
+  left:0;
+  background: url("../styles/images/salt-pepper-window.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text{
+  font-size: 9em;
+  color: #fff;
+}
+
+/*.anchor-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: -10%;
+  z-index: 1;
+}
+
+.contact-anchor{
+  height: 100px;
+  width: 200px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+  clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+}*/
+
+#home-view{
+  height: 100vh;
+}
+
+.home-view-container{
+  left:0;
+  background: url("../styles/images/craftsman-house.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text{
+  font-size: 10em;
+  color: #fff;
+}
+
+.anchor-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: -10%;
+  z-index: 1;
+}
+
+.home-anchor{
+  height: 100px;
+  width: 200px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+  clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+}
+
+.nav-container {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 2;
+  background-color: #000;
+  /*opacity: .7;*/
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.nav-link a:hover {
+  opacity: .7;
+}
+
+#newsletter-view{
+  height: 100vh;
+}
+
+.newsletter-view-container{
+  left:0;
+  background: linear-gradient(rgba(210,210,210,0.5), rgba(210,210,210,0.5)), url("../styles/images/chandelier-kitchen.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-text{
+  font-size: 9em;
+  color: #fff;
+}
+
+.anchor-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: -10%;
+  z-index: 1;
+}
+
+.newsletter-anchor{
+  height: 100px;
+  width: 200px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+  clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+p,a,ul,li,button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#testimonials-view{
+  height: 100vh;
+}
+
+.testimonials-view-container{
+  left:0;
+  background: url("../styles/images/succulent-table.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-text{
+  font-size: 9em;
+  color: #fff;
+}
+
+.anchor-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: -10%;
+  z-index: 1;
+}
+
+.testimonials-anchor{
+  height: 100px;
+  width: 200px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+  clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
+}
