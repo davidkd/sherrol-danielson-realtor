@@ -2,3 +2,7 @@ SELECT testimonials.testimonialcontent as testimonial, testimonials.userid, user
 FROM testimonials
 INNER JOIN users
 ON (testimonials.userid = users.userid);
+
+-- SELECT testimonials.testimonialcontent, testimonials.testfirstname, testimonials.testlastname
+-- FROM testimonials
+-- ;

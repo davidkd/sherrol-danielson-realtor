@@ -9,7 +9,7 @@ angular.module('realEstate', ['ui.router'])
       url: '/'
     }),
   $stateProvider
-    .state('postTestimonial', {
+    .state('post-testimonial', {
       templateUrl: './views/postTestimonial.html',
       controller: 'postTestFrontCtrl',
     })

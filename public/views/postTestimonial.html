@@ -1,3 +1,14 @@
-<!-- <div>
-  <a ui-sref="home">Home</a>
-</div> -->
+<div class='post-test-container'>
+  <div class='post-test-nav-bar'>
+      <a ui-sref="home">Home</a>
+  </div>
+
+  <form class= form-container>
+    <textarea ng-model='testimonial'></textarea><br>
+    First name:<br>
+    <input ng-model='firstname' type='text' name='firstname'></input><br>
+    Last name:<br>
+    <input ng-model='lastname' type='text' name='lastname'></input><br>
+    <input ng-click='postTestimonial(testimonial, firstname, lastname)' type="submit" value="Submit">
+  </form>
+</div>

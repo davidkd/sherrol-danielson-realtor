@@ -4,7 +4,9 @@ var db = app.get('db');
 module.exports = {
 
   createTestimonial: function(req, res, next) {
-    db.testimonials.create_testimonial([req.body.TestimonialContent, req.body.userID, req.body.testFirstName, req.body.testLastName], function(err, testimonial) {
+    console.log([req.body.TestimonialContent, req.body.testFirstName, req.body.testLastName])
+    db.testimonials.create_testimonial([req.body.testimonialcontent, req.body.testfirstname, req.body.testlastname], function(err, testimonial) {
+      if(err){res.send(err)}
       res.status(200).send(testimonial);
     })
   },

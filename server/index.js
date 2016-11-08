@@ -12,6 +12,8 @@ var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static(__dirname + '/../public'));
+
 var sdrDatabase = massive.connectSync({
   connectionString: "postgres://localhost/SDR"
 })
@@ -43,4 +45,4 @@ app.get('/users', usersCtrl.getUsers);
 //Listen
 app.listen(port, function() {
   console.log('listening on port ' + port);
-})
+});

@@ -1,4 +1,6 @@
 angular.module('realEstate').controller('testFrontCtrl', function($scope, mainService) {
-
-  // $scope.name = mainService.test;
+    mainService.getTestimonial().then(function(response) {
+      console.log("testimonial response: ", response.data);
+      $scope.testimonials = response.data;
+    });
 })
