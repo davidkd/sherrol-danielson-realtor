@@ -7,11 +7,27 @@ angular.module('realEstate', ['ui.router'])
       templateUrl: './views/home.html',
       controller: 'homeFrontCtrl',
       url: '/'
-    }),
-  $stateProvider
+    })
+    .state('login-register', {
+      templateUrl: './views/loginRegister.html',
+      controller: 'loginRegisterCtrl'
+    })
     .state('post-testimonial', {
       templateUrl: './views/postTestimonial.html',
       controller: 'postTestFrontCtrl',
+      resolve: {
+        user: function(authService, $state) {
+          return authService.getCurrentUser()
+            .then(function(response) {
+              if (!response.data)
+                $state.go('login-register');
+              return response.data;
+            })
+            .catch(function(err) {
+              $state.go('login-register');
+            });
+        }
+      }
     })
 
 

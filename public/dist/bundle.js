@@ -7,11 +7,27 @@ angular.module('realEstate', ['ui.router'])
       templateUrl: './views/home.html',
       controller: 'homeFrontCtrl',
       url: '/'
-    }),
-  $stateProvider
+    })
+    .state('login-register', {
+      templateUrl: './views/loginRegister.html',
+      controller: 'loginRegisterCtrl'
+    })
     .state('post-testimonial', {
       templateUrl: './views/postTestimonial.html',
       controller: 'postTestFrontCtrl',
+      resolve: {
+        user: ["authService", "$state", function(authService, $state) {
+          return authService.getCurrentUser()
+            .then(function(response) {
+              if (!response.data)
+                $state.go('login-register');
+              return response.data;
+            })
+            .catch(function(err) {
+              $state.go('login-register');
+            });
+        }]
+      }
     })
 
 
@@ -23,8 +39,39 @@ angular.module('realEstate').controller('contactFrontCtrl', ["$scope", "mainServ
 
 }])
 
-angular.module('realEstate').controller('homeFrontCtrl', ["$scope", "mainService", function($scope, mainService) {
-  
+angular.module('realEstate').controller('homeFrontCtrl', ["$scope", function($scope) {
+
+}])
+
+angular.module('realEstate').controller('loginRegisterCtrl', ["$scope", "mainService", "authService", "$state", function($scope, mainService, authService, $state) {
+
+  $scope.login = function(user) {
+  authService.login(user).then(function(response) {
+    if (!response.data) {
+      alert('User does not exist');
+      $scope.user.password = '';
+    } else {
+      // console.log(response);
+        $state.go('home');
+    }
+  }).catch(function(err) {
+    alert('Unable to login');
+  });
+};
+
+$scope.register = function(user) {
+  authService.registerUser(user).then(function(response) {
+    if (!response.data) {
+      alert('Unable to create user');
+    } else {
+      alert('User Created');
+      $scope.newUser = {};
+    }
+  }).catch(function(err) {
+    alert('Unable to create user');
+  });
+};
+
 }])
 
 angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) {
@@ -172,6 +219,48 @@ angular.module('realEstate').directive('welcome', function() {
     templateUrl: '../views/welcome.html'
   }
 })
+
+angular.module('realEstate').service('authService', ["$http", function($http) {
+
+  this.login = function(user) {
+  return $http({
+    method: 'post',
+    url: '/login',
+    data: user
+  }).then(function(response) {
+    return response;
+  });
+};
+
+this.logout = function() {
+  return $http({
+    method: 'get',
+    url: '/logout'
+  }).then(function(response) {
+    return response;
+  });
+};
+
+this.getCurrentUser = function() {
+  return $http({
+    method: 'GET',
+    url: '/me'
+  }).then(function(response) {
+    return response;
+  });
+};
+
+this.registerUser = function(user) {
+  return $http({
+    method: 'POST',
+    url: '/register',
+    data: user
+  }).then(function(response) {
+    return response;
+  });
+};
+
+}])
 
 angular.module('realEstate').service('mainService', ["$http", function($http) {
 

@@ -1,3 +1,3 @@
-angular.module('realEstate').controller('homeFrontCtrl', function($scope, mainService) {
-  
+angular.module('realEstate').controller('homeFrontCtrl', function($scope) {
+
 })

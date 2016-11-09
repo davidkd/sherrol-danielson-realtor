@@ -5,7 +5,7 @@ var css = require("gulp-css");
 var nodemon = require('gulp-nodemon');
 
 var paths = {
-    jsSource: ['public/**/*.js'],
+    jsSource: ['public/js/**/*.js'],
     cssSource: ['public/styles/**/*.css'],
     server: ['server/index.js']
 };
