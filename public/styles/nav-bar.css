@@ -6,12 +6,12 @@
   justify-content: space-around;
   position: fixed;
   z-index: 2;
-  background-color: #000;
+  background-color: #222222;
 }
 
 .nav-link a {
   text-decoration: none;
-  color: #fff;
+  color: #f6f6f6;
   font-size: 1.3em;
 }
 

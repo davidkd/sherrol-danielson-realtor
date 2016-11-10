@@ -9,12 +9,93 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.form-container {
+  height: 100vh;
+  width: 60%;
+  /*border: 1px white solid;*/
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/*.contact-text{
-  font-size: 9em;
-  color: #fff;
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group input {
+  height: 30px;
+  width: 400px;
+  /*display: flex;
+  align-items: flex-start;*/
+}
+
+.form-group textarea {
+  height: 100px;
+  width: 400px;
+  /*display: flex;
+  align-items: flex-start;*/
+}
+
+.submit-button {
+  height: 50px;
+  width: 437px;
+  border-color: transparent;
+  color: #F1F1F1;
+  border-radius: 3px;
+  /*background-color: #FFDE11;*/
+  background-color: #009688;
+
+}
+
+::-webkit-input-placeholder {
+   color: #d3d3d3;
+}
+
+.form-group input,
+.form-group textarea {
+  color: #FFF;
+}
+
+.form-container input,
+.form-container textarea {
+  /* to create space for placing icon*/
+  padding-left: 32px;
+  border-color: transparent;
+  /*background-color: #FFDE11;*/
+  background-color: #009688;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.form-container .submit-button:hover,
+.form-container .submit-button:focus {
+  /*background-color: #049DDF;*/
+  background-color: #222222;
+  color: #F1F1F1;
+  border-color: transparent;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+/*position should be relative and z-index greater than one*/
+/*.form-container .icon {
+  position: relative;
+  float: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  z-index: 2;
+  color: #222222;
+}*/
+
+/*.form-container .icon-textarea {
+  float: left;
+  margin-left: 8px;
+  margin-top: -10px;
+  position: relative;
+  z-index: 2;
+  color: #222222;
 }*/

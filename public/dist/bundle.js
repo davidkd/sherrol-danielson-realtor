@@ -81,7 +81,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#welcome-view").offset().top }, // Tell it to scroll the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -91,7 +91,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#testimonials-view").offset().top }, // Tell it toscroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -101,7 +101,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#newsletter-view").offset().top }, // Tell it tscroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -111,7 +111,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#contact-view").offset().top }, // Tell it scroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -121,7 +121,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#testimonials-view").offset().top }, // Tell it toscroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -131,7 +131,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#newsletter-view").offset().top }, // Tell it tscroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;
@@ -141,7 +141,7 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
         // Animate Scroll to #bottom
         $('html,body').animate({
           scrollTop: $("#contact-view").offset().top }, // Tell it scroll to the top #bottom
-          3500 // How long scroll will take in milliseconds
+          2700 // How long scroll will take in milliseconds
         );
         // Prevent default behavior of link
         return false;

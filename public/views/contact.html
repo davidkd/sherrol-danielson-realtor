@@ -1,7 +1,33 @@
 <div id='contact-view'>
-  <section class="contact-view-container">
-    <!-- <p class="contact-text">
-      Contact
-    </p> -->
-  </section>
+  <div class="contact-view-container">
+    <div class="form-container">
+      <form role="form " action="" method="">
+        <div class="form-group">
+          <!-- <label for="name"></label> -->
+          <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required />
+          <!--placing icon using a span element-->
+          <span class="icon fa fa-user fa-lg"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required />
+          <span class="icon fa fa-envelope fa-lg"></span>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="sub" name="sub" placeholder="Subject" required />
+          <span class="icon fa fa-pencil fa-lg"></span>
+        </div>
+
+        <div class="form-group">
+          <textarea  id="msg" name="msg" placeholder="Message"></textarea>
+          <span class="icon-textarea fa fa-paper-plane fa-lg"></span>
+        </div>
+
+        <div class="btn-container">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
