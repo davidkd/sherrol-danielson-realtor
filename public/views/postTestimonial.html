@@ -3,12 +3,12 @@
       <a ui-sref="home">Home</a>
   </div><br>
 
-  <form class= form-container>
+  <form ng-submit="postTestimonial(testimonial, firstname, lastname)"class="form-container">
     <textarea ng-model='testimonial'></textarea><br>
     First name:<br>
     <input ng-model='firstname' type='text' name='firstname'></input><br>
     Last name:<br>
     <input ng-model='lastname' type='text' name='lastname'></input><br>
-    <input ng-click='postTestimonial(testimonial, firstname, lastname)' type="submit" value="Submit">
+    <button type="submit">Submit</button>
   </form>
 </div>

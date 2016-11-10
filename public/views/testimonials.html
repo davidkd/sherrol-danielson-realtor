@@ -1,16 +1,25 @@
 <div id='testimonials-view'>
-  <section class="testimonials-view-container">
-    <p class="testimonials-text">
-      Testimonials
-    </p>
-
-    <div ng-repeat="testimonial in testimonials">
-      {{testimonial.lastname}}
+  <div class="testimonials-view-container">
+    <div class="testimonials-header-container">
+      <p class="test-header-text">
+        Testimonials
+      </p>
     </div>
 
-  </section>
+    <div class="main-content-wrapper">
+      <div class="testimonials-content-container" ng-repeat="testimonial in testimonials">
+        {{testimonial.testimonial}}<br>
+        -{{testimonial.firstname}} {{testimonial.lastname}}
+      </div>
+      <!-- <div class="testimonial-username" ng-repeat="testimonial in testimonials">
+        {{testimonial.firstname}} {{testimonial.lastname}}
+      </div> -->
+    </div>
 
-  <div class="anchor-wrapper">
-    <a href="#newsletter-view" id="testimonials-anchor"><div class="testimonials-anchor"></div></a>
+    <div class="test-anchor-wrapper">
+      <a href="#newsletter-view" id="testimonials-anchor">
+        <div class="testimonials-anchor"></div>
+      </a>
+    </div>
   </div>
 </div>

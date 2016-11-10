@@ -3,15 +3,15 @@ angular.module('realEstate').service('mainService', function($http) {
   this.getTestimonial = function() {
     return $http ({
       method: 'GET',
-      url: '/testimonials'
+      url: '/testimonial'
     });
   }
-  // this.getTestimonials = function() {
-  //   return $http ({
-  //     method: 'GET',
-  //     url: '/testimonials'
-  //   });
-  // }
+  this.getTestimonials = function() {
+    return $http ({
+      method: 'GET',
+      url: '/testimonials',
+    });
+  }
 
   this.postTestimonial = function(testimonial, firstname, lastname) {
     return $http ({
@@ -22,9 +22,7 @@ angular.module('realEstate').service('mainService', function($http) {
         testfirstname: firstname,
         testlastname: lastname
       }
-
     });
   }
 
-
-})
+});

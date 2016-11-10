@@ -14,26 +14,9 @@
   justify-content: center;
 }
 
-.contact-text{
+/*.contact-text{
   font-size: 9em;
   color: #fff;
-}
-
-/*.anchor-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  margin-top: -10%;
-  z-index: 1;
-}
-
-.contact-anchor{
-  height: 100px;
-  width: 200px;
-  background-color: white;
-  -webkit-clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
-  clip-path: polygon(50% 84%, 91% 57%, 91% 75%, 50% 100%, 9% 75%, 9% 57%);
 }*/
 
 
@@ -46,7 +29,6 @@
   position: fixed;
   z-index: 2;
   background-color: #000;
-  /*opacity: .7;*/
 }
 
 .nav-link a {
@@ -157,6 +139,9 @@ p,a,ul,li,button {
     font-family: 'Open Sans', sans-serif;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
 #testimonials-view{
   height: 100vh;
 }
@@ -168,22 +153,55 @@ p,a,ul,li,button {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.testimonials-text{
-  font-size: 9em;
+.testimonials-header-container {
+  height: 16vh;
+  width: 100%;
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 70px;
+}
+
+.test-header-text{
+  font-size: 4em;
   color: #fff;
+  float: right;
 }
 
-.anchor-wrapper{
+.main-content-wrapper {
+  height: 70vh;
+  width: auto;;
+  /*border: 1px solid black;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  /*overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;*/
+}
+
+.testimonials-content-container {
+  height: 65vh;
+  width: 30%;
+  font-size: 23px;
+  /*border: 1px solid white;*/
+  color: #191919;
+}
+
+.test-anchor-wrapper{
+  height: 15vh;
+  width: 100%;
+  /*border: 1px solid black;*/
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  margin-top: -10%;
+  padding-bottom: 50px;
   z-index: 1;
 }
 

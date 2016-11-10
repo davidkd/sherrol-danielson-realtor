@@ -66,7 +66,7 @@ app.get('/user', usersCtrl.getUser);
 app.get('/users', usersCtrl.getUsers);
 app.get('/me', usersCtrl.getCurrentUser);
 
-// TESTIMONIALS ENDPOINTS //
+// TESTIMONIAL ENDPOINTS //
 app.post('/testimonial/post', testimonialsCtrl.createTestimonial);
 app.get('/testimonial', testimonialsCtrl.getTestimonial);
 app.get('/testimonials', testimonialsCtrl.getTestimonials);

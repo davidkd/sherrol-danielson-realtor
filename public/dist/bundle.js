@@ -154,9 +154,8 @@ angular.module('realEstate').controller('newsFrontCtrl', ["$scope", "mainService
 }])
 
 angular.module('realEstate').controller('postTestFrontCtrl', ["$scope", "mainService", function($scope, mainService) {
-
+console.log('hey');
   $scope.postTestimonial = function(testimonial, firstname, lastname) {
-    console.log(firstname, lastname, testimonial)
     mainService.postTestimonial(testimonial, firstname, lastname).then(function(response) {
       console.log(response);
     })
@@ -164,7 +163,7 @@ angular.module('realEstate').controller('postTestFrontCtrl', ["$scope", "mainSer
 }])
 
 angular.module('realEstate').controller('testFrontCtrl', ["$scope", "mainService", function($scope, mainService) {
-    mainService.getTestimonial().then(function(response) {
+    mainService.getTestimonials().then(function(response) {
       console.log("testimonial response: ", response.data);
       $scope.testimonials = response.data;
     });
@@ -267,15 +266,15 @@ angular.module('realEstate').service('mainService', ["$http", function($http) {
   this.getTestimonial = function() {
     return $http ({
       method: 'GET',
-      url: '/testimonials'
+      url: '/testimonial'
     });
   }
-  // this.getTestimonials = function() {
-  //   return $http ({
-  //     method: 'GET',
-  //     url: '/testimonials'
-  //   });
-  // }
+  this.getTestimonials = function() {
+    return $http ({
+      method: 'GET',
+      url: '/testimonials',
+    });
+  }
 
   this.postTestimonial = function(testimonial, firstname, lastname) {
     return $http ({
@@ -286,9 +285,7 @@ angular.module('realEstate').service('mainService', ["$http", function($http) {
         testfirstname: firstname,
         testlastname: lastname
       }
-
     });
   }
 
-
-}])
+}]);
