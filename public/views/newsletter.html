@@ -1,9 +1,12 @@
 <div id='newsletter-view'>
-  <section class="newsletter-view-container">
+  <div class="newsletter-view-container">
     <p class="newsletter-text">
       Newsletter
     </p>
-  </section>
+  </div>
+  <div class="newsletter-stuff" ng-repeat="newsletter in newsletters">
+    {{newsletter.title}}
+  </div>
   <div class="anchor-wrapper">
     <a href="#contact-view" id="newsletter-anchor"><div class="newsletter-anchor"></div></a>
   </div>

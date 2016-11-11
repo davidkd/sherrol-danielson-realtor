@@ -7,6 +7,14 @@ angular.module('realEstate', ['ui.router'])
       templateUrl: './views/home.html',
       controller: 'homeFrontCtrl',
       url: '/'
+      // resolve: {
+      //   newsletters: function(mainService, $state) {
+      //     return mainService.getNewsletters().then(function(response) {
+      //       console.log("newsletter response: ", response.data);
+      //       return response.data;
+      //     })
+      //   }
+      // }
     })
     .state('login-register', {
       templateUrl: './views/loginRegister.html',
@@ -14,7 +22,7 @@ angular.module('realEstate', ['ui.router'])
     })
     .state('post-testimonial', {
       templateUrl: './views/postTestimonial.html',
-      controller: 'postTestFrontCtrl',
+      controller: 'postTestimonialCtrl',
       resolve: {
         user: function(authService, $state) {
           return authService.getCurrentUser()
@@ -28,6 +36,11 @@ angular.module('realEstate', ['ui.router'])
             });
         }
       }
+    })
+    .state('post-newsletter', {
+      templateUrl: './views/postNewsletter.html',
+      controller: 'postNewsletterCtrl',
+      url: '/newsletter/post'
     })
 
 

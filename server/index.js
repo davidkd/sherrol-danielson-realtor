@@ -71,8 +71,9 @@ app.post('/testimonial/post', testimonialsCtrl.createTestimonial);
 app.get('/testimonial', testimonialsCtrl.getTestimonial);
 app.get('/testimonials', testimonialsCtrl.getTestimonials);
 
-
-
+// NEWSLETTER ENDPOINTS //
+app.post('/newsletter/post', newsletterCtrl.createNewsletter);
+app.get('/newsletters', newsletterCtrl.getNewsletters);
 
 
 

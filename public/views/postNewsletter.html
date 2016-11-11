@@ -1,0 +1,15 @@
+<div class='post-newsletter-container'>
+  <div class='post-newsletter-nav-bar'>
+      <a ui-sref="home">Home</a>
+  </div><br>
+
+  <form ng-submit="postNewsletter(title, date, newsletter)"class="newsletter-form-container">
+    Title:<br>
+    <input ng-model='title' type='text' name='title'></input><br>
+    Date:<br>
+    <input ng-model='date' type='date' name='date'></input><br>
+    Newsletter:<br>
+    <textarea ng-model='newsletter' type='text' name='newsletter'></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>

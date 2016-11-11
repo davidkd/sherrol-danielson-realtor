@@ -26,11 +26,12 @@ testFirstName text,
 testLastname text
 )
 
-CREATE TABLE Newsletter
+CREATE TABLE newsletter
 (
-NewsletterID SERIAL PRIMARY KEY,
-NewsletterDate DATE NOT NULL,
-NewsletterContent VARCHAR(6000) NOT NULL
+id SERIAL PRIMARY KEY,
+title VARCHAR NOT NULL,
+date VARCHAR NOT NULL,
+newsletter VARCHAR NOT NULL
 )
 
 INSERT INTO admin(firstname, lastname, email, password) VALUES ('Sherrol', 'Danielson', 'sherrol.danielson@gmail.com', 'sherrol.danielson', 'sherroldanielson123');
@@ -39,7 +40,7 @@ INSERT INTO users(firstname, lastname, email, password, phone) VALUES ('John', '
 
 INSERT INTO users(firstname, lastname, email, password, phone) VALUES ('Hank', 'Hill', 'hank.hill@gmail.com', 'hankhill123', '801-654-7865');
 
-INSERT INTO testimonials(testimonialcontent, userid) VALUES ('Testimonial. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,', 2);
+INSERT INTO testimonials(title, date, newsletter) VALUES ('Testimonial. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,', 2);
 
 INSERT INTO testimonials(testimonialcontent, userid) VALUES ('Testimonial2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,', 1);
 

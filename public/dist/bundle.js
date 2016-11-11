@@ -7,6 +7,14 @@ angular.module('realEstate', ['ui.router'])
       templateUrl: './views/home.html',
       controller: 'homeFrontCtrl',
       url: '/'
+      // resolve: {
+      //   newsletters: function(mainService, $state) {
+      //     return mainService.getNewsletters().then(function(response) {
+      //       console.log("newsletter response: ", response.data);
+      //       return response.data;
+      //     })
+      //   }
+      // }
     })
     .state('login-register', {
       templateUrl: './views/loginRegister.html',
@@ -14,7 +22,7 @@ angular.module('realEstate', ['ui.router'])
     })
     .state('post-testimonial', {
       templateUrl: './views/postTestimonial.html',
-      controller: 'postTestFrontCtrl',
+      controller: 'postTestimonialCtrl',
       resolve: {
         user: ["authService", "$state", function(authService, $state) {
           return authService.getCurrentUser()
@@ -28,6 +36,11 @@ angular.module('realEstate', ['ui.router'])
             });
         }]
       }
+    })
+    .state('post-newsletter', {
+      templateUrl: './views/postNewsletter.html',
+      controller: 'postNewsletterCtrl',
+      url: '/newsletter/post'
     })
 
 
@@ -150,10 +163,22 @@ angular.module('realEstate').controller('mainCtrl', ["$scope", function($scope) 
 }])
 
 angular.module('realEstate').controller('newsFrontCtrl', ["$scope", "mainService", function($scope, mainService) {
-
+  mainService.getNewsletters().then(function(response) {
+    console.log("newsletter response: ", response.data);
+    $scope.newsletters = response.data;
+  });
 }])
 
-angular.module('realEstate').controller('postTestFrontCtrl', ["$scope", "mainService", function($scope, mainService) {
+angular.module("realEstate").controller("postNewsletterCtrl", ["$scope", "mainService", function($scope, mainService) {
+  console.log('postNewsletterCtrl');
+  $scope.postNewsletter = function(title, date, newsletter) {
+    mainService.postNewsletter(title, date, newsletter).then(function(response) {
+      console.log(response);
+    })
+  }
+}]);
+
+angular.module('realEstate').controller('postTestimonialCtrl', ["$scope", "mainService", function($scope, mainService) {
 console.log('hey');
   $scope.postTestimonial = function(testimonial, firstname, lastname) {
     mainService.postTestimonial(testimonial, firstname, lastname).then(function(response) {
@@ -199,7 +224,8 @@ angular.module('realEstate').directive('navBar', function() {
 angular.module('realEstate').directive('newsletter', function() {
   return {
     restrict: 'AE',
-    templateUrl: '../views/newsletter.html'
+    templateUrl: '../views/newsletter.html',
+    controller: "newsFrontCtrl"
   }
 })
 
@@ -275,7 +301,6 @@ angular.module('realEstate').service('mainService', ["$http", function($http) {
       url: '/testimonials',
     });
   }
-
   this.postTestimonial = function(testimonial, firstname, lastname) {
     return $http ({
       method: 'POST',
@@ -284,6 +309,23 @@ angular.module('realEstate').service('mainService', ["$http", function($http) {
         testimonialcontent: testimonial,
         testfirstname: firstname,
         testlastname: lastname
+      }
+    });
+  }
+  this.getNewsletters = function() {
+    return $http ({
+      method: 'GET',
+      url: '/newsletters'
+    });
+  }
+  this.postNewsletter = function(title, date, newsletter) {
+    return $http ({
+      method: 'POST',
+      url: '/newsletter/post',
+      data: {
+        title: title,
+        date: date,
+        newsletter: newsletter
       }
     });
   }
