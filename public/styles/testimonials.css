@@ -7,7 +7,7 @@
 
 .testimonials-view-container{
   left:0;
-  background: url("../styles/images/succulent-table.jpeg") no-repeat center center fixed;
+  background: linear-gradient(rgba(210,210,210,0.7), rgba(210,210,210,0.7)), url("../styles/images/succulent-table.jpeg") no-repeat center center fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,14 +15,14 @@
 }
 
 .testimonials-header-container {
-  height: 16vh;
+  height: 18vh;
   width: 100%;
   /*border: 1px solid red;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-right: 70px;
+  padding-right: 50px;
 }
 
 .test-header-text{
@@ -31,30 +31,35 @@
   float: right;
 }
 
-.main-content-wrapper {
-  height: 70vh;
-  width: auto;;
+.main-content-container {
+  height: 71vh;
+  width: auto%;
   /*border: 1px solid black;*/
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
-  /*overflow-x: scroll;
+  overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;*/
 }
 
-.testimonials-content-container {
-  height: 65vh;
-  width: 30%;
-  font-size: 23px;
+.testimonials-content-wrapper {
+  height: 67vh;
+  width: 33%;
+  /*font-size: 23px;*/
+  font-size: 1.438em;
   /*border: 1px solid white;*/
   color: #191919;
+  padding-left: 31px;
+  padding-right: 31px;
+  text-align: justify;
+  display: table;
+  table-layout: fixed;
 }
 
 .test-anchor-wrapper{
-  height: 15vh;
+  height: 11vh;
   width: 100%;
   /*border: 1px solid black;*/
   display: flex;
