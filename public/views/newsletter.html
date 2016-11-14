@@ -1,13 +1,40 @@
 <div id='newsletter-view'>
-  <div class="newsletter-view-container">
-    <p class="newsletter-text">
-      Newsletter
-    </p>
-  </div>
-  <div class="newsletter-stuff" ng-repeat="newsletter in newsletters">
-    {{newsletter.title}}
-  </div>
-  <div class="anchor-wrapper">
-    <a href="#contact-view" id="newsletter-anchor"><div class="newsletter-anchor"></div></a>
+  <div class="news-view-container">
+
+    <div class="news-header-container">
+      <p class="news-header-text">
+        Newsletter
+      </p>
+    </div>
+
+    <div class='news-section-container'>
+
+      <div class='news-content-wrapper' ng-repeat='newsletter in newsletters'>
+
+        <h1>{{newsletter.title}}</h1><br>
+        <h2>{{newsletter.date}}</h2><br>
+        <p>{{newsletter.newsletter}}</p>
+
+      <!-- <div class='news-title-container'>
+        <div class='news-title' ng-repeat='newsletter in newsletters'>{{newsletter.title}}</div>
+      </div>
+
+      <div class='news-date-container'>
+        <div class='news-date' ng-repeat='newsletter in newsletters'>{{newsletter.date}}</div>
+      </div>
+
+      <div class='news-content-container'>
+        <div class="news-content" ng-repeat="newsletter in newsletters">
+          {{newsletter.newsletter}}
+        </div>
+      </div> -->
+
+      </div>
+    </div>
+
+    <div class="news-anchor-wrapper">
+      <a href="#contact-view" id="newsletter-anchor"><div class="newsletter-anchor"></div></a>
+    </div>
+
   </div>
 </div>

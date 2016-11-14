@@ -31,12 +31,11 @@
   float: right;
 }
 
-.main-content-container {
+.test-content-container {
   height: 71vh;
   width: auto%;
   /*border: 1px solid black;*/
   display: flex;
-  /*justify-content: space-around;*/
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;

@@ -1,30 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
 #newsletter-view{
   height: 100vh;
 }
 
-.newsletter-view-container{
+.news-view-container{
   left:0;
   background: linear-gradient(rgba(210,210,210,0.5), rgba(210,210,210,0.5)), url("../styles/images/chandelier-kitchen.jpeg") no-repeat center center fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.newsletter-text{
-  font-size: 9em;
+.news-header-container {
+  height: 18vh;
+  width: 100%;
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.news-header-text{
+  font-size: 4em;
   color: #fff;
+  float: left;
 }
 
-.anchor-wrapper{
+.news-section-container {
+  height: 71vh;
+  width: auto;
+  /*border: 1px solid black;*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+/*.news-title-container {
+  height: 8vh;
+  width: 100%;
+  border: 2px solid blue;
+}*/
+
+/*.news-title {
+  text-align: center;
+  line-height: 8vh;
+  font-size: 3.5em;
+}*/
+
+/*.news-date-container {
+  height: 5vh;
+  width: 100%;
+  border: 2px solid yellow;
+}*/
+
+/*.news-date {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em
+}*/
+
+.news-content-wrapper {
+  height: 71vh;
+  width: 100%%;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: table;
+  table-layout: fixed;
+  /*border: 2px solid blue;*/
+}
+
+/*.news-content {
+  font-size: 1.4em;
+  color: #191919;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+}*/
+
+.news-anchor-wrapper{
+  height: 11vh;
+  width: 100%;
+  /*border: 1px solid black;*/
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  margin-top: -10%;
+  padding-bottom: 50px;
   z-index: 1;
 }
 
